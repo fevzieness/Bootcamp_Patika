@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class mukemmelsayi {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Bir tamsayı giriniz: ");
+        int a = scn.nextInt();
+        scn.close();
+        int toplam = 0;
+        for (int i = 1; i < a; i++) {
+            if (a % i == 0)
+                toplam += i;
+        }
+        String durum = toplam == a ? "Mükemmel sayı buldunuz." : "Girdiğiniz sayı mükemmel sayı değil";
+        System.out.println(durum);
+    }
+}
